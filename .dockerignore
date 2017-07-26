@@ -1,0 +1,3 @@
+*.md
+*.run
+build-image.sh
