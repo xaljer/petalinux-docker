@@ -79,5 +79,8 @@ RUN wget -q $installer_url/petalinux-v2014.4-final-installer.run && \
 #     echo 'alias plconfig="petalinx-config"' >> ~/.bashrc    && \
 
 RUN ln -fs /bin/bash /bin/sh    # bash is PetaLinux recommended shell
-WORKDIR /workspace
+
+RUN adduser --disabled-password --gecos '' plnx
+USER plnx
+WORKDIR /home/plnx
 
