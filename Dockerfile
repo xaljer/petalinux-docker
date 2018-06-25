@@ -70,6 +70,7 @@ COPY ./auto-install.sh .
 # = 2. =============================================================================
 RUN wget -q $installer_url/petalinux-v2014.4-final-installer.run && \
     chmod a+x petalinux-v2014.4-final-installer.run              && \
+    chmod a+x auto-install.sh                                    && \
     ./auto-install.sh $install_dir                               && \
     rm -rf petalinux-v2014.4-final-installer.run
 # ==================================================================================
